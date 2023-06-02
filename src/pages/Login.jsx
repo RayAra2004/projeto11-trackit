@@ -1,21 +1,27 @@
 import Logo from "../components/Logo";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {SCButton, SCCadastro, SCForm, SCInput, SCLogin} from "../style/LoginStyle"
-import { useState } from "react";
+import { useContext, useState } from "react";
 import axios from "axios";
 import { URL_BASE } from "../const/URL";
+import { Usuario } from "../Context";
 
 export default function Login(){
 
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
+    const [usuario, setUsuario] = useContext(Usuario);
+    const navigate = useNavigate();
 
     function entrar(e){
         e.preventDefault();
  
 
         axios.post(`${URL_BASE}auth/login`, {email, password: senha})
-            .then(res => console.log(res.data))
+            .then(res => {
+                setUsuario(res.data);
+                navigate('/hoje');
+            })
             .catch(res => alert(res.message))
     }
 
