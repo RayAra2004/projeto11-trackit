@@ -6,6 +6,7 @@ export default function Hoje(){
     return(
         <SCHoje>
             <Topo/>
+    
             <Menu/>
         </SCHoje>
     );

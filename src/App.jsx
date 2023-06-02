@@ -6,7 +6,6 @@ import Hoje from "./pages/Hoje"
 import Historico from "./pages/Historico"
 import { Usuario } from "./Context"
 import { useState } from "react"
-import { SCApp } from "./style/AppStyle"
 
 
 export default function App() {
@@ -15,7 +14,7 @@ export default function App() {
 
   return (
     <Usuario.Provider value={[usuario, setUsuario]}>
-      <SCApp>
+      <>
         <BrowserRouter>
           <Routes>      
               <Route path="/" element={<Login/>}/>
@@ -25,7 +24,7 @@ export default function App() {
               <Route path="/historico" element={<Historico/>}/>           
           </Routes>
         </BrowserRouter>
-      </SCApp>
+      </>
     </Usuario.Provider>
   )
 }
