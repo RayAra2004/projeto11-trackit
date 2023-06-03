@@ -43,6 +43,7 @@ export const SCButton = styled.button`
     text-align: center;
     border: none;
     color: #FFFFFF;
+    opacity: ${props => props.disabled ? '0.7' : '1'};
 `
 
 export const SCCadastro = styled.p`
