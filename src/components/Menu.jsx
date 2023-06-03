@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 
 export default function Menu(){
     return(
-        <SCMenu>
-            <Link to={'/habitos'}>
+        <SCMenu data-test="menu">
+            <Link data-test="habit-link" to={'/habitos'}>
                 <SCPRotas left={'20px'}>Hábitos</SCPRotas>
             </Link>
-            <Link to={'/hoje'}>
+            <Link data-test="today-link" to={'/hoje'}>
                 <SCProgressBar>
                     <CircularProgressbar value={10} text="Hoje"
                         background
@@ -23,7 +23,7 @@ export default function Menu(){
                     />
                 </SCProgressBar>
             </Link>
-            <Link to={'/historico'}>
+            <Link data-test="history-link" to={'/historico'}>
                 <SCPRotas left={'270px'}>Histórico</SCPRotas>
             </Link>
         </SCMenu>

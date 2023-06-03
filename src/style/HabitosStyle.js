@@ -7,7 +7,7 @@ export const SCHabitos = styled.div`
     height: 100svh;
 `
 
-export const SCMeusHabitos = styled.div`
+export const SCCriarHabitos = styled.div`
     position: absolute;
     top: 28px;
     left: 0px;
@@ -41,5 +41,21 @@ export const SCMeusHabitos = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+`
+
+export const SCMeusHabitos = styled.div`
+    position: absolute;
+    top: 180px;
+    left: 0px;
+    width: 100%;
+    p{
+        margin-left: 10px;
+        font-family: 'Lexend Deca';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17.976px;
+        line-height: 22px;
+        color: #666666;
     }
 `

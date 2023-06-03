@@ -6,9 +6,9 @@ export default function Topo(){
     const [usuario, setUsuario] = useContext(Usuario);
 
     return(
-        <SCTopo>
+        <SCTopo data-test="header">
                 <SCNome>Trackit</SCNome>
-                <SCImage src={usuario.image}/>
+                <SCImage data-test="avatar" src={usuario.image}/>
         </SCTopo>
     );
 }

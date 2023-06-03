@@ -29,15 +29,15 @@ export default function Login(){
         <SCLogin>
             <Logo/>
             <SCForm onSubmit={entrar}>
-                <SCInput name="email" id="email" type="email" placeholder="email"
+                <SCInput data-test="email-input" name="email" id="email" type="email" placeholder="email"
                 value={email} onChange={e => setEmail(e.target.value)}
                 />
-                <SCInput name="senha" id="senha" type="password" placeholder="senha"
+                <SCInput data-test="password-input" name="senha" id="senha" type="password" placeholder="senha"
                 value={senha} onChange={e => setSenha(e.target.value)}
                 />
-                <SCButton type="submit">Entrar</SCButton>
+                <SCButton data-test="login-btn" type="submit">Entrar</SCButton>
             </SCForm>
-            <Link to={'/cadastro'}>
+            <Link data-test="singup-link" to={'/cadastro'}>
                 <SCCadastro>Não tem uma conta? Cadastre-se!</SCCadastro>
             </Link>
         </SCLogin>
