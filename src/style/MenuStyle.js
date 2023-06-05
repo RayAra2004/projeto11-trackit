@@ -10,7 +10,7 @@ export const SCMenu = styled.div`
     display: flex;
 `
 
-export const SCProgressBar = styled.div`
+export const SCProgressBar = styled.button`
     width: 91px;
     height: 91px;
     position: absolute;
