@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Usuario } from "../Context";
+import { Usuario } from "../resources/Context";
 import { SCImage, SCNome, SCTopo } from "../style/TopoStyle";
 import { Link } from "react-router-dom";
 

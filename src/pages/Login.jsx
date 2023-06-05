@@ -3,8 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import {SCButton, SCCadastro, SCForm, SCInput, SCLogin} from "../style/LoginStyle"
 import { useContext, useState } from "react";
 import axios from "axios";
-import { URL_BASE } from "../const/URL";
-import { Usuario } from "../Context";
+import { URL_BASE } from "../resources/URL";
+import { Usuario } from "../resources/Context";
 import {BeatLoader} from 'react-spinners';
 
 export default function Login(){

@@ -3,7 +3,7 @@ import Logo from "../components/Logo";
 import { SCCadastro, SCForm, SCInput, SCButton, SCLogin } from "../style/CadastroStyle";
 import { useState } from "react";
 import axios from "axios";
-import { URL_BASE } from "../const/URL";
+import { URL_BASE } from "../resources/URL";
 import {BeatLoader} from 'react-spinners';
 
 export default function Cadastro(){

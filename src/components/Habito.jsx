@@ -1,8 +1,8 @@
 import axios from "axios";
 import { SCHabito } from "../style/HabitoStyle";
 import DiasSemana from "./DiasSemana";
-import { URL_BASE } from "../const/URL";
-import { Usuario } from "../Context";
+import { URL_BASE } from "../resources/URL";
+import { Usuario } from "../resources/Context";
 import { useContext } from "react";
 
 export default function Habito(props){
@@ -26,9 +26,9 @@ export default function Habito(props){
     }
 
     return(
-        <SCHabito>
-            <ion-icon onClick={() => deletarHabito(id)} name="trash-outline"></ion-icon>
-            <p>{nome}</p>
+        <SCHabito data-test="habit-container">
+            <ion-icon data-test="habit-delete-btn" onClick={() => deletarHabito(id)} name="trash-outline"></ion-icon>
+            <p data-test="habit-name">{nome}</p>
             <DiasSemana diasEscolhidos={dias} setDiasEscolhidos = {null} disabled = {true}/>
         </SCHabito>
     );

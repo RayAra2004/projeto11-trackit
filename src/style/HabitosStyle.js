@@ -5,6 +5,14 @@ export const SCHabitos = styled.div`
     background-color: #E5E5E5; 
     /* height: 100svh; */
 `
+export const SCBody = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 30px;
+`
 
 export const SCCriarHabitos = styled.div`
     width: 100%;
@@ -124,11 +132,3 @@ export const SCOpcoes = styled.div`
     margin-left: 130px;
 `
 
-export const SCBody = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
-    top: 30px;
-`

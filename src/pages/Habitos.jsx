@@ -1,10 +1,10 @@
 import { useContext, useEffect, useState } from "react";
-import { Usuario } from "../Context";
+import { Usuario } from "../resources/Context";
 import Menu from "../components/Menu";
 import Topo from "../components/Topo";
 import { SCHabitos, SCCriarHabitos, SCMeusHabitos, SCCadastrandoHabito, SCBody, SCCancelar, SCBtnSalvar, SCOpcoes } from "../style/HabitosStyle";
 import axios from "axios";
-import { URL_BASE } from "../const/URL";
+import { URL_BASE } from "../resources/URL";
 import DiasSemana from "../components/DiasSemana";
 import Habito from "../components/Habito";
 import {BeatLoader} from 'react-spinners';
@@ -89,13 +89,13 @@ export default function Habitos(){
         if(carregando){
             return(
                 <>
-                    <SCBtnSalvar> <BeatLoader loading={carregando} color={'#FFFFFF'}/> </SCBtnSalvar>
+                    <SCBtnSalvar data-test="habit-create-save-btn"> <BeatLoader loading={carregando} color={'#FFFFFF'}/> </SCBtnSalvar>
                 </>
             );
         }else{
             return(
                 <>
-                    <SCBtnSalvar onClick={() => enviarHabito()}>Salvar</SCBtnSalvar>
+                    <SCBtnSalvar data-test="habit-create-save-btn" onClick={() => enviarHabito()}>Salvar</SCBtnSalvar>
                 </>
             );
         }
@@ -104,11 +104,11 @@ export default function Habitos(){
     function cadastrarHabito(){
         if(cadastrando){
             return(
-                <SCCadastrandoHabito>
-                    <input disabled={carregando} value={nomeHabito} onChange={e => setNomeHabito(e.target.value)} placeholder="nome do hábito"/>
+                <SCCadastrandoHabito data-test="habit-create-container">
+                    <input data-test="habit-name-input" disabled={carregando} value={nomeHabito} onChange={e => setNomeHabito(e.target.value)} placeholder="nome do hábito"/>
                     <DiasSemana diasEscolhidos = {diasEscolhidos} setDiasEscolhidos = {setDiasEscolhidos} disabled={carregando}/>
                     <SCOpcoes>
-                        <SCCancelar onClick={() => setCadastrando(false)}>Cancelar</SCCancelar>
+                        <SCCancelar data-test="habit-create-cancel-btn" onClick={() => setCadastrando(false)}>Cancelar</SCCancelar>
                         {btnSalvar()}
                     </SCOpcoes>
                 </SCCadastrandoHabito>
@@ -124,7 +124,7 @@ export default function Habitos(){
             <SCBody>
                 <SCCriarHabitos>
                     <p>Meus Hábitos</p>
-                    <button onClick={() => setCadastrando(true)}>+</button>
+                    <button data-test="habit-create-btn" onClick={() => setCadastrando(true)}>+</button>
                 </SCCriarHabitos>
                 {cadastrarHabito()}
                 {meusHabitos()}

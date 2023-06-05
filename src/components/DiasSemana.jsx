@@ -26,7 +26,8 @@ function DiaSemana(props){
 
     return(
         <>
-            <SCBtnDia 
+            <SCBtnDia
+                data-test="habit-day" 
                 onClick={() => escolherDia(diasEscolhidos, setDiasEscolhidos, indice)}
                 selecionado = {diasEscolhidos.includes(indice)}
                 disabled = {disabled}

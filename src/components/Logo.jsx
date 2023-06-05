@@ -1,11 +1,9 @@
-import { SCNomeLogo, SCImgLogo } from '../style/LogoStyle';
-import logo from './../assets/grafico.png'
+import logo from './../assets/logo.svg'
 
 export default function Logo(){
     return(
         <>
-            <SCImgLogo src={logo}/>
-            <SCNomeLogo>Trackit</SCNomeLogo>
+            <img src={logo}/>
         </>
     );
 }
